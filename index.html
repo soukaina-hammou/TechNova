@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex R1 | Unleash the Beast</title>
+    <script src="https://js.stripe.com/v3/"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -73,9 +74,9 @@
             <span class="close-btn" id="closeModal">&times;</span>
             <h2>Reserve Your Ride</h2>
             <form id="orderForm">
-                <input type="text" id="name" placeholder="Full Name" required>
-                <input type="email" id="email" placeholder="Email Address" required>
-                <select id="model">
+                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                <select name="bike_model" id="model">
                     <option value="Onyx Black">Onyx Black</option>
                     <option value="Magma Red">Magma Red</option>
                 </select>
