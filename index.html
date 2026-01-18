@@ -1,317 +1,612 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNova | Premium Electronics</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechNova | Premium Electronics</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
         // Configure Tailwind for class-based dark mode
         tailwind.config = {
             darkMode: 'class',
         }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
         .glass {
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
         body { transition: background-color 0.3s ease, color 0.3s ease; }
     </style>
-</head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+    </head>
+    <body
+        class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
 
-    <nav class="glass fixed top-0 w-full z-50 transition-all duration-300 bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent italic">TECHNOVA</span>
-                </div>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium transition">Home</a>
-                    <a href="#shop" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium transition">Shop</a>
-                    <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium transition">Categories</a>
-                </div>
+        <nav
+            class="glass fixed top-0 w-full z-50 transition-all duration-300 bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span
+                            class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent italic">TECHNOVA</span>
+                    </div>
 
-                <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400 hover:ring-2 ring-blue-400 transition">
-                        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden"></i>
-                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
-                    </button>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#home"
+                            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium transition">Home</a>
+                        <a href="#shop"
+                            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium transition">Shop</a>
+                        <a href="#"
+                            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium transition">Categories</a>
+                    </div>
 
-                    <button class="relative p-2 text-gray-600 dark:text-gray-300">
-                        <i class="fa-solid fa-cart-shopping text-lg"></i>
-                        <span class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] rounded-full px-1.5 cart-badge">0</span>
-                    </button>
-                    
-                    <button class="md:hidden text-gray-600 dark:text-gray-300" id="mobile-menu-btn">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+                    <div class="flex items-center space-x-4">
+                        <button id="theme-toggle"
+                            class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400 hover:ring-2 ring-blue-400 transition">
+                            <i id="theme-toggle-dark-icon"
+                                class="fa-solid fa-moon hidden"></i>
+                            <i id="theme-toggle-light-icon"
+                                class="fa-solid fa-sun hidden"></i>
+                        </button>
 
-    <section id="home" class="pt-32 pb-20 md:pt-48 md:pb-32 bg-white dark:bg-gray-950 transition-colors">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 dark:text-white">
-                        Future Tech <br> <span class="text-blue-600">In Your Hands.</span>
-                    </h1>
-                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
-                        Experience the next generation of performance with our curated collection of high-end smartphones and workstations.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#shop" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">Shop Now</a>
-                        <a href="#" class="border border-gray-300 dark:border-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition">View Gallery</a>
+                        <button
+                            class="relative p-2 text-gray-600 dark:text-gray-300">
+                            <i class="fa-solid fa-cart-shopping text-lg"></i>
+                            <span
+                                class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] rounded-full px-1.5 cart-badge">0</span>
+                        </button>
+
+                        <button
+                            class="md:hidden text-gray-600 dark:text-gray-300"
+                            id="mobile-menu-btn">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="md:w-1/2 relative">
-                    <div class="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-full"></div>
-                    <img src="https://i.pinimg.com/736x/dc/69/54/dc69541b276428ef7325b09dd73a5fc4.jpg" alt="Hero Phone" class="relative rounded-3xl shadow-2xl transform md:rotate-3 hover:rotate-0 transition duration-500">
+            </div>
+        </nav>
+
+        <section id="home"
+            class="pt-32 pb-20 md:pt-48 md:pb-32 bg-white dark:bg-gray-950 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1
+                            class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 dark:text-white">
+                            Future Tech <br> <span class="text-blue-600">In Your
+                                Hands.</span>
+                        </h1>
+                        <p
+                            class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
+                            Experience the next generation of performance with
+                            our curated collection of high-end smartphones and
+                            workstations.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#shop"
+                                class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">Shop
+                                Now</a>
+                            <a href="#"
+                                class="border border-gray-300 dark:border-gray-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition">View
+                                Gallery</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 relative">
+                        <div
+                            class="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-full"></div>
+                        <img src="src/technova Logo.png" alt="logo"
+                            class="relative rounded-3xl shadow-2xl transform md:rotate-3 hover:rotate-0 transition duration-500">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="shop" class="py-24 bg-gray-50 dark:bg-gray-900 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold dark:text-white">Explore Our Collection</h2>
-            <p class="text-gray-500 mt-2">Premium gear for work, play, and everything in between.</p>
-            
-            <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <button class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white font-medium transition" data-filter="all">All</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition" data-filter="phone">Phones</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition" data-filter="laptop">Laptops</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition" data-filter="gaming">Gaming</button>
-                <button class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition" data-filter="accessory">Accessories</button>
+        <section id="shop"
+            class="py-24 bg-gray-50 dark:bg-gray-900 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold dark:text-white">Explore
+                        Our Collection</h2>
+                    <p class="text-gray-500 mt-2">Premium gear for work, play,
+                        and everything in between.</p>
+
+                    <div class="flex flex-wrap justify-center gap-4 mt-8">
+                        <button
+                            class="filter-btn active px-6 py-2 rounded-full bg-blue-600 text-white font-medium transition"
+                            data-filter="all">All</button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition"
+                            data-filter="phone">Phones</button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition"
+                            data-filter="laptop">Laptops</button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition"
+                            data-filter="gaming">Gaming</button>
+                        <button
+                            class="filter-btn px-6 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition"
+                            data-filter="accessory">Accessories</button>
+                    </div>
+                </div>
+
+                <div id="product-grid"
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="phone">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/df/df/97/dfdf976355e6f774066577d63e8da09c.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-blue-600 font-bold uppercase">Smartphone</span>
+                        <h3 class="text-xl font-bold mt-2 dark:text-white">Apple
+                            13 Pro</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">iOS
+                            15 - 6Go de RAM - 256Go - 2021</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$690</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="accessory">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/c9/cb/72/c9cb7273a4cbab1c3d44604b0ed48450.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-green-600 font-bold uppercase">accessory</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Headphone
+                            BeoPlay H6</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">B&O
+                            - Circum Auriculaire - 20000Hz.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$499</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="accessory">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/f0/5a/9a/f05a9aa21e95372e7d4760f02f21d54b.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-green-600 font-bold uppercase">Accessory</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Souris
+                            MX Master 3S</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Souris
+                            MX Master 3S 910-006559 - USB-C/Bluetooth.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$199</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="gaming">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/4d/53/4b/4d534b0573146be8e69cb5702fb6d7c1.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
+                        <h3 class="text-xl font-bold mt-2 dark:text-white">NZXT
+                            Kraken Elite</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">NZXT
+                            Kraken Elite 360 V2 - RGB liquid cooling system with
+                            advanced control.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$559</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="gaming">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/f4/0b/af/f40baf0012ce8258b9642d1b4070a597.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Kinston
+                            FURY Beast</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Kinston
+                            FURY Beast - 64GB DDR5 - 6000 MHz - 1.35 Volts.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$1999</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="gaming">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/7e/0d/b3/7e0db3dabe1ccc337b49f242c34abc23.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Gaming
+                            Desk </h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">COOLER
+                            MASTER GD160 ARGB GAMING DESK<br>18 kg.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$929</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="gaming">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/19/7b/94/197b94739be16e70d301b14789b8e9b8.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Gaming
+                            Chair</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Cooler
+                            Master Caliber E1 Black Chair - 120 kg.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$2,499</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="laptop">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/46/d9/43/46d9437de7a7e1c9efab0d1b5f904579.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-orange-600 font-bold uppercase">Laptop</span>
+                        <h3 class="text-xl font-bold mt-2 dark:text-white">HP
+                            Victus 16 Ryzen 7</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">AMD
+                            Ryzen 7 -NVIDIA GeForce RTX 4070 - Windows 11 - 16Go
+                            RAM DDR5 - 1To SSD.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$1,499</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="phone">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/736x/fc/8c/4b/fc8c4b46a82d18d4e25ccf9e8a4bebab.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-blue-600 font-bold uppercase">Smartphone</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Samsung
+                            Galaxy Z Fold 7</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Samsung
+                            Galaxy Z Fold 7 - Android 16 - 16Go de RAM - 1To de
+                            Stockage.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$1,199</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="accessory">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/f2/8b/82/f28b829651bf3c54277a105772137dfe.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-green-600 font-bold uppercase">Accessory</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">KEEBMONKEY
+                            WOBKEY Rainy 75</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Clavier
+                            mécanique compact 75% avec éclairage RGB
+                            personnalisable et switches tactiles.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$299</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="phone">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/736x/0f/00/7a/0f007ab325746bb7b5d68d4a09028e30.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-blue-600 font-bold uppercase">Smartphone</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Samsung
+                            Galaxy Z Flip 7</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Android
+                            16 - 12Go de RAM - 512Go .</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$979</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="gaming">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://tse3.mm.bing.net/th/id/OIP.zXrZdMI_J0oMDxFn84f66QHaE6?w=2000&h=1328&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
+                        <h3 class="text-xl font-bold mt-2 dark:text-white">PC
+                            Gamer Ryzen 7 </h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">AMD
+                            Ryzen 7 7800X3D - MSI RTX 4060 Ti Ventus 16RAM DDR5
+                            - 2 To SSD.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$1,999</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="gaming">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/23/7b/e5/237be574a81c83bb43f0758d8730694f.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
+                        <h3 class="text-xl font-bold mt-2 dark:text-white">PC
+                            Gamer i9</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Intel
+                            Core i9-14900K - NVIDIA GeForce RTX 5090 128RAM DDR4
+                            - 4 To SSD.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$6,799</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="laptop">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/40/ea/fa/40eafa0f69289edceaf129d1e34f49a1.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-orange-600 font-bold uppercase">Laptop</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Lenovo
+                            Legion 7 Pro Ultra 9 RTX 5080</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Intel
+                            Core Ultra 9 275HX - NVIDIA GeForce RTX 5080<br>
+                            32RAM DDR5 - 1To SSD.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$3,499</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="laptop">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://i.pinimg.com/1200x/b5/11/56/b51156f55068e0830785c48cc397f923.jpg"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-orange-600 font-bold uppercase">Laptop</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Lenovo
+                            LOQ 15IAX9 i5</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Lenovo
+                            LOQ Intel i5 - NVIDIA GeForce RTX4050 - Windows 11 -
+                            24Go RAM DDR5 - 512Go SSD.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$1,899</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group"
+                        data-category="accessory">
+                        <div
+                            class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RyD4RM5nmL3MX-yioYAOfYHY0NhWl31wFA&s"
+                                class="h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <span
+                            class="text-xs text-green-600 font-bold uppercase">Accessory</span>
+                        <h3
+                            class="text-xl font-bold mt-2 dark:text-white">Module
+                            WiFi Epson</h3>
+                        <p
+                            class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Module
+                            WiFi Epson ELPAP11 pour projecteur Dual Fonction
+                            5GHZ V12H005A01.</p>
+                        <div class="flex justify-between items-center">
+                            <span
+                                class="text-2xl font-bold dark:text-white">$179</span>
+                            <button
+                                class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="phone">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/df/df/97/dfdf976355e6f774066577d63e8da09c.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
+        <section id="categories"
+            class="py-24 bg-white dark:bg-gray-950 transition-colors">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <a class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold dark:text-white">Shop
+                    by Category</h2>
+                <p class="text-gray-500 mt-2">Find the perfect tech for your
+                    needs.</p>
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <a href="#shop"
+                        class="category-card bg-gray-100 dark:bg-gray-800 rounded-3xl p-6 shadow-sm hover:shadow-lg transition w-40 text-center">
+                        <i
+                            class="fa-solid fa-mobile-screen-button text-4xl text-blue-600 mb-4"></i>
+                        <h3
+                            class="text-lg font-bold dark:text-white">Phones</h3>
+                    </a>
+                    <a href="#shop"
+                        class="category-card bg-gray-100 dark:bg-gray-800 rounded-3xl p-6 shadow-sm hover:shadow-lg transition w-40 text-center">
+                        <i
+                            class="fa-solid fa-laptop text-4xl text-orange-600 mb-4"></i>
+                        <h3
+                            class="text-lg font-bold dark:text-white">Laptops</h3>
+                    </a>
+                    <a href="#shop"
+                        class="category-card bg-gray-100 dark:bg-gray-800 rounded-3xl p-6 shadow-sm hover:shadow-lg transition w-40 text-center">
+                        <i
+                            class="fa-solid fa-gamepad text-4xl text-purple-600 mb-4"></i>
+                        <h3
+                            class="text-lg font-bold dark:text-white">Gaming</h3>
+                    </a>
+                    <a href="#shop"
+                        class="category-card bg-gray-100 dark:bg-gray-800 rounded-3xl p-6 shadow-sm hover:shadow-lg transition w-40 text-center">
+                        <i
+                            class="fa-solid fa-headphones text-4xl text-green-600 mb-4"></i>
+                        <h3
+                            class="text-lg font-bold dark:text-white">Accessories</h3>
+                    </a>
                 </div>
-                <span class="text-xs text-blue-600 font-bold uppercase">Smartphone</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Apple 13 Pro</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">iOS 15 - 6Go de RAM - 256Go - 2021</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$690</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
+            </section>
 
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="accessory">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/c9/cb/72/c9cb7273a4cbab1c3d44604b0ed48450.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
+            <footer
+                class="py-8 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-colors">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p class="text-gray-500 dark:text-gray-400">&copy; 2026
+                        TechNova. All rights reserved.</p>
                 </div>
-                <span class="text-xs text-green-600 font-bold uppercase">accessory</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Headphone BeoPlay H6</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">B&O - Circum Auriculaire - 20000Hz.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$499</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
+            </footer>
 
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="accessory">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/f0/5a/9a/f05a9aa21e95372e7d4760f02f21d54b.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-green-600 font-bold uppercase">Accessory</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Souris MX Master 3S</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Souris MX Master 3S 910-006559 - USB-C/Bluetooth.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$199</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="gaming">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/4d/53/4b/4d534b0573146be8e69cb5702fb6d7c1.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">NZXT Kraken Elite</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">NZXT Kraken Elite 360 V2 - RGB liquid cooling system with advanced control.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$559</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="gaming">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/f4/0b/af/f40baf0012ce8258b9642d1b4070a597.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Kinston FURY Beast</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Kinston FURY Beast - 64GB DDR5 - 6000 MHz - 1.35 Volts.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$1999</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="gaming">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/7e/0d/b3/7e0db3dabe1ccc337b49f242c34abc23.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Gaming Desk </h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">COOLER MASTER GD160 ARGB GAMING DESK<br>18 kg.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$929</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="gaming">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/19/7b/94/197b94739be16e70d301b14789b8e9b8.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Gaming Chair</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Cooler Master Caliber E1 Black Chair - 120 kg.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$2,499</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="laptop">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/46/d9/43/46d9437de7a7e1c9efab0d1b5f904579.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-orange-600 font-bold uppercase">Laptop</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">HP Victus 16 Ryzen 7</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">AMD Ryzen 7 -NVIDIA GeForce RTX 4070 - Windows 11 - 16Go RAM DDR5 - 1To SSD.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$1,499</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="phone">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/736x/fc/8c/4b/fc8c4b46a82d18d4e25ccf9e8a4bebab.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-blue-600 font-bold uppercase">Smartphone</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Samsung Galaxy Z Fold 7</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Samsung Galaxy Z Fold 7 - Android 16 - 16Go de RAM - 1To de Stockage.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$1,199</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="accessory">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/f2/8b/82/f28b829651bf3c54277a105772137dfe.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-green-600 font-bold uppercase">Accessory</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">KEEBMONKEY WOBKEY Rainy 75</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Clavier mécanique compact 75% avec éclairage RGB personnalisable et switches tactiles.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$299</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="phone">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/736x/0f/00/7a/0f007ab325746bb7b5d68d4a09028e30.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-blue-600 font-bold uppercase">Smartphone</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Samsung Galaxy Z Flip 7</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Android 16 - 12Go de RAM - 512Go .</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$979</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="gaming">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.zXrZdMI_J0oMDxFn84f66QHaE6?w=2000&h=1328&rs=1&pid=ImgDetMain&o=7&rm=3" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">PC Gamer Ryzen 7 </h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">AMD Ryzen 7 7800X3D - MSI RTX 4060 Ti Ventus   16RAM DDR5 - 2 To SSD.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$1,999</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="gaming">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/23/7b/e5/237be574a81c83bb43f0758d8730694f.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-purple-600 font-bold uppercase">Gaming</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">PC Gamer i9</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Intel Core i9-14900K - NVIDIA GeForce RTX 5090   128RAM DDR4 - 4 To SSD.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$6,799</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="laptop">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/40/ea/fa/40eafa0f69289edceaf129d1e34f49a1.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-orange-600 font-bold uppercase">Laptop</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Lenovo Legion 7 Pro Ultra 9 RTX 5080</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Intel Core Ultra 9 275HX - NVIDIA GeForce RTX 5080<br> 32RAM DDR5 - 1To SSD.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$3,499</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="laptop">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/1200x/b5/11/56/b51156f55068e0830785c48cc397f923.jpg" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-orange-600 font-bold uppercase">Laptop</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Lenovo LOQ 15IAX9 i5</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Lenovo LOQ Intel i5 - NVIDIA GeForce RTX4050 - Windows 11 -  24Go RAM DDR5 - 512Go SSD.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$1,899</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-            <div class="product-card bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-sm border border-transparent dark:border-gray-700 transition-all duration-300 group" data-category="accessory">
-                <div class="h-64 mb-6 overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RyD4RM5nmL3MX-yioYAOfYHY0NhWl31wFA&s" class="h-full object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <span class="text-xs text-green-600 font-bold uppercase">Accessory</span>
-                <h3 class="text-xl font-bold mt-2 dark:text-white">Module WiFi Epson</h3>
-                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2 mb-6">Module WiFi Epson ELPAP11 pour projecteur Dual Fonction 5GHZ V12H005A01.</p>
-                <div class="flex justify-between items-center">
-                    <span class="text-2xl font-bold dark:text-white">$179</span>
-                    <button class="add-to-cart bg-gray-900 dark:bg-blue-600 text-white px-5 py-2.5 rounded-xl hover:opacity-90 transition">Add to Cart</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<footer class="py-8 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="text-gray-500 dark:text-gray-400">&copy; 2026 TechNova. All rights reserved.</p>
-    </div>
-</footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <script src="script.js"></script>
+        </body>
+    </html>
